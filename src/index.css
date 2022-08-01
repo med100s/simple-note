@@ -4,12 +4,13 @@ body {
   font-family: sans-serif;
 }
 .wrap_audio{
-  height: 300px;
-  width:300px;
+  height: 350px;
+  width: 300px;  
+  margin:0 auto;
+
 } 
-.soundbar{
-  margin: 0 auto;
-  width: 800px;
-  display: inline-block;
-  text-align: center;
+.soundbar{    
+  height: auto;
+  width: 100%;
+  margin:0 auto; 
 }

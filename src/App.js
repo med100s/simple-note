@@ -19,7 +19,16 @@ class App extends Component {
                 <div className="soundbar">
 
                     <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" />
+                    <Equalized src="sounds/170247__matucha__campfire-01.wav" />
+                    <Equalized src="sounds/405561__inspectorj__wind-realistic-a.wav" />
+
+                    <Equalized src="sounds/584595__tosha73__mountain-river.wav" />
+
                     <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" />
+
+                    <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" />
+
+
                 </div>
 
             </div>
