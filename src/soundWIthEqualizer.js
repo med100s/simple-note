@@ -29,6 +29,7 @@ class Equalized extends Component {
         this.audio = this.audioRef.current
         this.audio.crossOrigin = "anonymous";
         this.context = new (window.AudioContext || window.webkitAudioContext)();
+        this.context.resume()
         this.source = this.context.createMediaElementSource(this.audio);
          
         this.analyser = this.context.createAnalyser();
@@ -94,10 +95,7 @@ class Equalized extends Component {
                     loop
                 >
                 </audio>
-
-                <button onClick={() => this.handleClick()}>
-                    Нажми на меня
-                </button>
+ 
                 <Range
                     className="range_filter"
                     step={0.1}
