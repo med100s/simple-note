@@ -87,7 +87,7 @@ class Equalized extends Component {
                     controls
                     ref={this.audioRef}
                     id={'some_audio'}
-                    src="/sounds/mixkit-arcade-game-complete-or-approved-mission-205.wav"
+                    src="https://github.com/med100s/simple-note/blob/master/public/sounds/mixkit-arcade-game-complete-or-approved-mission-205.ogg?raw=true"
                     loop
                 >
                 </audio>
