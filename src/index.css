@@ -7,3 +7,9 @@ body {
   height: 300px;
   width:300px;
 } 
+.soundbar{
+  margin: 0 auto;
+  width: 800px;
+  display: inline-block;
+  text-align: center;
+}

@@ -10,6 +10,7 @@ class Equalized extends Component {
         super(props);
         this.audioRef = React.createRef();
         this.myRef = React.createRef();
+        this.src = props.src
     }
 
 
@@ -76,19 +77,20 @@ class Equalized extends Component {
         this.lowShelf.gain.value = Math.ceil(this.state.values4[0]);
 
         this.highPass.frequency.value = Math.ceil(this.state.values5[0] * 16);
-        this.highPass.Q.value = this.state.values5[0] * 0.014;
+        this.highPass.Q.value = this.state.values6[0] * 0.014;
 
-        this.lowPass.frequency.value = 880;
-        this.lowPass.Q.value = 0.7;
+        this.lowPass.frequency.value = Math.ceil(this.state.values7[0] * 17,6);
+        this.lowPass.Q.value = this.state.values6[0] * 0.014;
     }
     render() {
         return (
-            <div className="wrap_audio">
+            <div className="wrap_audio"
+            >
                 <audio
                     controls
                     ref={this.audioRef}
                     id={'some_audio'}
-                    src="https://github.com/med100s/simple-note/blob/master/public/sounds/mixkit-arcade-game-complete-or-approved-mission-205.ogg?raw=true"
+                    src={this.src}
                     loop
                 >
                 </audio>
@@ -272,7 +274,7 @@ class Equalized extends Component {
                         />
                     )}
                 />
-                <Range
+                {/* <Range
                     className="range_filter"
                     step={0.1}
                     min={0}
@@ -306,7 +308,7 @@ class Equalized extends Component {
                             }}
                         />
                     )}
-                />
+                /> */}
                 <Range
                     className="range_filter"
                     step={0.1}
@@ -342,7 +344,7 @@ class Equalized extends Component {
                         />
                     )}
                 />
-                <Range
+                {/* <Range
                     className="range_filter"
                     step={0.1}
                     min={0}
@@ -376,7 +378,7 @@ class Equalized extends Component {
                             }}
                         />
                     )}
-                />
+                /> */}
 
             </div>
         );
