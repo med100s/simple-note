@@ -26,6 +26,7 @@ class Equalized extends Component {
     componentDidMount() {
          
         this.audio = this.audioRef.current
+        this.audio.crossOrigin = "anonymous";
         this.context = new (window.AudioContext || window.webkitAudioContext)();
         this.source = this.context.createMediaElementSource(this.audio);
          
