@@ -11,6 +11,7 @@ class Equalized extends Component {
         this.audioRef = React.createRef();
         this.myRef = React.createRef();
         this.src = props.src
+        this.title = props.title
     }
 
 
@@ -25,19 +26,35 @@ class Equalized extends Component {
         values8: [50],
     };
     componentDidMount() {
-         
-        this.audio = this.audioRef.current
-        this.audio.crossOrigin = "anonymous";
-        this.context = new (window.AudioContext || window.webkitAudioContext)();
-        this.context.resume()
-        this.source = this.context.createMediaElementSource(this.audio);
-         
-        this.analyser = this.context.createAnalyser();
-        this.source.connect(this.analyser);
-        this.analyser.connect(this.context.destination);
-         
-        this.handleChange()
+        setTimeout(()=>{
+            this.audio = this.audioRef.current
+            this.audio.crossOrigin = "anonymous";
+            this.context = new (window.AudioContext || window.webkitAudioContext)();
+            this.context.resume()
+            this.source = this.context.createMediaElementSource(this.audio);
+             
+            this.analyser = this.context.createAnalyser();
+            this.source.connect(this.analyser);
+            this.analyser.connect(this.context.destination);
+             
+            this.handleChange()
+        },2000)
+        
     }
+    // handleClick =()=>{
+ 
+    //     this.audio = this.audioRef.current
+    //     this.audio.crossOrigin = "anonymous";
+    //     this.context = new (window.AudioContext || window.webkitAudioContext)();
+    //     this.context.resume()
+    //     this.source = this.context.createMediaElementSource(this.audio);
+    //     this.audio.crossOrigin = "anonymous";
+    //     this.analyser = this.context.createAnalyser();
+    //     this.source.connect(this.analyser);
+    //     this.analyser.connect(this.context.destination);
+    //     this.audio.crossOrigin = "anonymous";
+    //     this.handleChange()
+    // }
 
     handleChange = () => { 
   
@@ -85,9 +102,11 @@ class Equalized extends Component {
     }
     render() {
         return (
-            <div className="wrap_audio"
-            >
+            <div className="wrap_audio">
+                {/* <button onClick={()=>this.handleClick()}></button> */}
+                <h3>{this.title}</h3>
                 <audio
+                    crossorigin="anonymous"
                     controls
                     ref={this.audioRef}
                     id={'some_audio'}

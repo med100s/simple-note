@@ -39,6 +39,7 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
         "start": "node scripts/start.js",
+        "server": "node scripts/start.js --host=192.168.0.110 --port=3000",
         "build": "export NODE_ENV=production && rm -rf ./build && webpack --env.production --optimize-minimize"
     }
 }

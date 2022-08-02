@@ -18,15 +18,20 @@ class App extends Component {
             <div className="App">
                 <div className="soundbar">
 
-                    <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" />
-                    <Equalized src="sounds/170247__matucha__campfire-01.wav" />
-                    <Equalized src="sounds/405561__inspectorj__wind-realistic-a.wav" />
-
-                    <Equalized src="sounds/584595__tosha73__mountain-river.wav" />
-
-                    <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" />
-
-                    <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" />
+                    <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" title="rain" />
+                    <Equalized src="sounds/170247__matucha__campfire-01.wav" title="fire" />
+                    <Equalized src="sounds/405561__inspectorj__wind-realistic-a.wav" title="wind" />
+                    <Equalized src="sounds/584595__tosha73__mountain-river.wav" title="river" />
+                    <Equalized src="sounds/133901__audionautics__lava-loop.wav" title="lava" />
+                    <Equalized src="sounds/164191__bmoreno__0384-flags.wav" title="flags" />
+                    <Equalized src="sounds/173013__ninebilly__market.wav" title="market" />
+                    <Equalized src="sounds/178648__zabuhailo__churchbells.flac" title="churchbells" />
+                    <Equalized src="sounds/412843__inspectorj__boiling-water-large-a.wav" title="boiling-water" />
+                    <Equalized src="sounds/641762__sonotomia__fiumei-graveyard-nature-and-mall-aircon-sonotomia-jozsef-iszlai.wav" title="graveyard" />
+                    <Equalized src="sounds/173096__stormpetrel__whistling-antarctic-blizzard.flac" title="blizzard" />
+                    <Equalized src="sounds/496305__zaziesound__water-drops-2.wav"title="water-drops" />
+                    <Equalized src="sounds/211945__qubodup__the-office.flac" title="office" />
+                    <Equalized src="sounds/" />
 
 
                 </div>
