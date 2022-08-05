@@ -26,7 +26,10 @@ class Equalized extends Component {
         values8: [50],
     };
     componentDidMount() {
-        setTimeout(()=>{
+        document.addEventListener('click', ()=>{
+
+        
+      //  setTimeout(()=>{
             this.audio = this.audioRef.current
             this.audio.crossOrigin = "anonymous";
             this.context = new (window.AudioContext || window.webkitAudioContext)();
@@ -38,8 +41,8 @@ class Equalized extends Component {
             this.analyser.connect(this.context.destination);
              
             this.handleChange()
-        },2000)
-        
+        //},2000)
+        })
     }
     // handleClick =()=>{
  
