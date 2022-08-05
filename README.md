@@ -20,3 +20,7 @@ npm start
 ```
 npm run build
 ```
+
+
+# demo
+https://med100s.github.io/simple-note/
