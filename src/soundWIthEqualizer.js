@@ -42,7 +42,7 @@ class Equalized extends Component {
              
             this.handleChange()
         //},2000)
-        })
+        }, {once : true})
     }
     // handleClick =()=>{
  
