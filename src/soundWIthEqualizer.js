@@ -12,6 +12,7 @@ class Equalized extends Component {
         this.myRef = React.createRef();
         this.src = props.src
         this.title = props.title
+        this.volume = props.volume 
     }
 
 
@@ -26,11 +27,13 @@ class Equalized extends Component {
         values8: [50],
     };
     componentDidMount() {
-        document.addEventListener('click', ()=>{
+        document.addEventListener('mousemove', ()=>{
 
         
       //  setTimeout(()=>{
             this.audio = this.audioRef.current
+            console.log(this.volume)
+            this.audio.volume = this.volume
             this.audio.crossOrigin = "anonymous";
             this.context = new (window.AudioContext || window.webkitAudioContext)();
             this.context.resume()
