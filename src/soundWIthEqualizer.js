@@ -53,10 +53,10 @@ class Equalized extends Component {
 
             this.setup()
         }, { once: true })
-        document.addEventListener('mousemove', () => {
+        // document.addEventListener('mousemove', () => {
 
-            this.setup()
-        }, { once: true })
+        //     this.setup()
+        // }, { once: true })
         try {
             document.addEventListener('touchstart', () => {
 
@@ -150,7 +150,7 @@ class Equalized extends Component {
                     min={0}
                     max={100}
                     values={this.state.values1}
-                    onChange={(values1) => { this.setState({ values1 }); this.handleChange() }}
+                    onChange={(values1) => {this.setup(); this.setState({ values1 }); this.handleChange() }}
 
 
                     renderTrack={({ props, children }) => (
@@ -186,7 +186,7 @@ class Equalized extends Component {
                     min={0}
                     max={100}
                     values={this.state.values2}
-                    onChange={(values2) => { this.setState({ values2 }); this.handleChange() }}
+                    onChange={(values2) => {this.setup(); this.setState({ values2 }); this.handleChange() }}
 
 
                     renderTrack={({ props, children }) => (
@@ -221,7 +221,7 @@ class Equalized extends Component {
                     min={0}
                     max={100}
                     values={this.state.values3}
-                    onChange={(values3) => { this.setState({ values3 }); this.handleChange() }}
+                    onChange={(values3) => {this.setup(); this.setState({ values3 }); this.handleChange() }}
 
 
                     renderTrack={({ props, children }) => (
@@ -256,7 +256,7 @@ class Equalized extends Component {
                     min={0}
                     max={100}
                     values={this.state.values4}
-                    onChange={(values4) => { this.setState({ values4 }); this.handleChange() }}
+                    onChange={(values4) => {this.setup(); this.setState({ values4 }); this.handleChange() }}
 
 
                     renderTrack={({ props, children }) => (
@@ -291,7 +291,7 @@ class Equalized extends Component {
                     min={0}
                     max={100}
                     values={this.state.values5}
-                    onChange={(values5) => { this.setState({ values5 }); this.handleChange() }}
+                    onChange={(values5) => {this.setup(); this.setState({ values5 }); this.handleChange() }}
 
 
                     renderTrack={({ props, children }) => (
@@ -361,7 +361,7 @@ class Equalized extends Component {
                     min={0}
                     max={100}
                     values={this.state.values7}
-                    onChange={(values7) => { this.setState({ values7 }); this.handleChange() }}
+                    onChange={(values7) => {this.setup(); this.setState({ values7 }); this.handleChange() }}
 
 
                     renderTrack={({ props, children }) => (

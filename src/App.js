@@ -16,7 +16,18 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+
+                <div className="description">
+                    <h1>Simple sound</h1>
+
+                    <h4>
+                        <p>On this website you can found different background sounds.</p>
+                        <p>They are customazible so if some sound not actually
+                            what you need you can change it how you like .</p>
+                    </h4>
+                </div>
                 <div className="soundbar">
+
 
                     <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-intense-rain-loop-1246.mp3" title="rain" volume={0.15} />
                     <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-campfire-crackles-1330.mp3" title="fire" volume={1} />
