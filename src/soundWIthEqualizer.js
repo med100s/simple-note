@@ -12,6 +12,8 @@ class Equalized extends Component {
         this.myRef = React.createRef();
         this.src = props.src
         this.title = props.title
+        this.volume = props.volume
+        this.isSetup - false
     }
 
 
@@ -25,27 +27,51 @@ class Equalized extends Component {
         values7: [50],
         values8: [50],
     };
-    componentDidMount() {
-        document.addEventListener('click', ()=>{
-
-        
-      //  setTimeout(()=>{
+    setup() {
+        if (!this.isSetup) {
             this.audio = this.audioRef.current
+            console.log(this.volume)
+            // this.audio.volume = this.volume 
             this.audio.crossOrigin = "anonymous";
             this.context = new (window.AudioContext || window.webkitAudioContext)();
             this.context.resume()
             this.source = this.context.createMediaElementSource(this.audio);
-             
+
             this.analyser = this.context.createAnalyser();
             this.source.connect(this.analyser);
             this.analyser.connect(this.context.destination);
-             
+
             this.handleChange()
-        //},2000)
-        }, {once : true})
+
+            this.isSetup = true
+        }
+    }
+    componentDidMount() {
+
+        
+        document.addEventListener('click', () => {
+
+            this.setup()
+        }, { once: true })
+        document.addEventListener('mousemove', () => {
+
+            this.setup()
+        }, { once: true })
+        try {
+            document.addEventListener('touchstart', () => {
+
+                this.setup()
+            }, { once: true })
+            document.addEventListener('touchmove', () => {
+    
+                this.setup()
+            }, { once: true })
+        } catch (error) {
+            
+        }
     }
     // handleClick =()=>{
- 
+
     //     this.audio = this.audioRef.current
     //     this.audio.crossOrigin = "anonymous";
     //     this.context = new (window.AudioContext || window.webkitAudioContext)();
@@ -59,16 +85,16 @@ class Equalized extends Component {
     //     this.handleChange()
     // }
 
-    handleChange = () => { 
-  
-        // console.log(this.source)
-        if(this.highShelf == undefined){
+    handleChange = () => {
 
-            this. highShelf = this.context.createBiquadFilter();
-            this. lowShelf = this.context.createBiquadFilter();
-            this. highPass = this.context.createBiquadFilter();
-            this. lowPass = this.context.createBiquadFilter();
-    
+        // console.log(this.source)
+        if (this.highShelf == undefined) {
+
+            this.highShelf = this.context.createBiquadFilter();
+            this.lowShelf = this.context.createBiquadFilter();
+            this.highPass = this.context.createBiquadFilter();
+            this.lowPass = this.context.createBiquadFilter();
+
             console.log('success')
             this.source.connect(this.highShelf)
         }
@@ -79,11 +105,11 @@ class Equalized extends Component {
         this.highShelf.connect(this.lowShelf);
         this.lowShelf.connect(this.highPass);
         this.highPass.connect(this.lowPass);
-        try{
+        try {
 
             this.lowPass.connect(this.context.destination);
             console.log('success')
-        }catch(err){console.log('err')}
+        } catch (err) { console.log('err') }
 
         this.highShelf.type = "highshelf";
         this.lowShelf.type = "lowshelf";
@@ -100,7 +126,7 @@ class Equalized extends Component {
         this.highPass.frequency.value = Math.ceil(this.state.values5[0] * 16);
         this.highPass.Q.value = this.state.values6[0] * 0.014;
 
-        this.lowPass.frequency.value = Math.ceil(this.state.values7[0] * 17,6);
+        this.lowPass.frequency.value = Math.ceil(this.state.values7[0] * 17, 6);
         this.lowPass.Q.value = this.state.values6[0] * 0.014;
     }
     render() {
@@ -117,7 +143,7 @@ class Equalized extends Component {
                     loop
                 >
                 </audio>
- 
+
                 <Range
                     className="range_filter"
                     step={0.1}
