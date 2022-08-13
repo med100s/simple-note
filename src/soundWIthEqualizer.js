@@ -136,10 +136,11 @@ class Equalized extends Component {
                 <h3>{this.title}</h3>
                 <audio
                     crossorigin="anonymous"
+                    controls
                     ref={this.audioRef}
                     id={'some_audio'}
                     src={this.src}
-                    onended="this.play();" controls="controls" autobuffer
+                    loop
                 >
                 </audio>
 
