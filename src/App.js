@@ -18,7 +18,7 @@ class App extends Component {
             <div className="App">
 
                 <div className="description">
-                    <h1>Simple sound</h1>
+                    <h1>Simple Sound Space</h1>
 
                     <h4>
                         <p>On this website you can found different background sounds.</p>
