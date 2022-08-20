@@ -52,11 +52,11 @@ class Equalized extends Component {
         document.addEventListener('click', () => { 
             this.setup()
         }, { once: true })
-        try { 
-            document.addEventListener('mousemove', () => { 
-                this.setup()
-            }, { once: true })
-        } catch (err) { }
+        // try { 
+        //     document.addEventListener('mousemove', () => { 
+        //         this.setup()
+        //     }, { once: true })
+        // } catch (err) { }
         try {
             document.addEventListener('touchstart', () => { 
                 this.setup()
