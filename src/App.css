@@ -25,11 +25,49 @@
 }
 
 .wrap_audio{ 
-  height: 350px;
-  width: 300px;  
-  margin:0 auto;
+  height: 255px;
+  width: 330px;  
+  margin:30px auto;
+  padding-top: 1px;
+  border-radius: 15px;  
+  background: linear-gradient(124deg, rgba(250, 36, 0, 0.8),
+                                      rgba(240, 255, 37, 0.8),
+                                      rgba(255, 153, 70, 0.8),
+                                      rgba(255, 41, 41, 0.8), 
+                                      rgba(29, 232, 64, 0.8), 
+                                      rgba(29, 221, 232, 0.8), 
+                                      rgba(43, 29, 232, 0.8), 
+                                      rgba(221, 0, 243, 0.8), 
+                                      #dd00f3);
+ 
+  background-size: 500% 500%;
 
-} 
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
 .soundbar{
 
   height: auto;

@@ -131,7 +131,7 @@ class Equalized extends Component {
         return (
             <div className="wrap_audio">
                 {/* <button onClick={()=>this.handleClick()}></button> */}
-                <h3>{this.title}</h3>
+                <h3 className="audio_title">{this.title}</h3>
                 <audio
                     crossorigin="anonymous"
                     controls
