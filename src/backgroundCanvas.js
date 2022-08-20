@@ -19,23 +19,48 @@ export default function BackgroundCanvas() {
 
         let ctx = canvas.getContext('2d');
 
+
+
         ctx.canvas.width = window.innerWidth;
         ctx.canvas.height = window.innerHeight;
 
         function drawCircle() {
             ctx.beginPath();
             ctx.arc(window.mouseX, window.mouseY, 30, 0, 2 * Math.PI);
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "#c7c7c7";
             ctx.fill();
         }
         function getCursorPosition(event) {
             window.mouseX = event.clientX
             window.mouseY = event.clientY
         }
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
         function drawParticle(frame) {
+
+            let color = getRandomColor()
+
+            // var grad = ctx.createRadialGradient(105, 55, 50, 105, 55, 0);
+            // grad.addColorStop(0, "transparent");
+            // grad.addColorStop(0.33, color);	// extra point to control "fall-off"
+            // grad.addColorStop(1, "black");
+
+            // ctx.fillStyle = grad;
+            // ctx.filter = "blur(10px)";
+            // ctx.fillRect(0, 0, 300, 150);
+
+            ctx.shadowBlur = 40;
+            ctx.shadowColor = color;
+            ctx.fillStyle = color;
+            let size = 15
             let start = 0
-            let direction = 0
             let x = window.mouseX
             let y = window.mouseY
             let x1 = 0
@@ -46,23 +71,22 @@ export default function BackgroundCanvas() {
             return function () {
                 ctx.beginPath();
                 try {
-                    ctx.arc(x + x1, y + y1, 30 - frame / 10, 0, 2 * Math.PI);
+                    ctx.arc(x + x1, y + y1, size, 0, 2 * Math.PI);
                 } catch (err) { }
-                ctx.fillStyle = "white";
                 ctx.fill();
                 x1 += x2
                 y1 += y2
                 frame += 3
+                size -= 0.1
                 if (frame % 300 == 0) {
-                    direction = Math.floor(Math.random() * 360)
                     frame = 0
-                    direction = 3
+                    size = 15
                     x = window.mouseX
                     y = window.mouseY
                     x1 = 0
                     y1 = 0
-                    x2 = Math.floor(Math.random() * 6)-3
-                    y2 = Math.floor(Math.random() * 6)-3
+                    x2 = (Math.floor(Math.random() * 7) - 3) / 2
+                    y2 = (Math.floor(Math.random() * 7) - 3) / 2
                 }
             }
         }
@@ -110,7 +134,7 @@ export default function BackgroundCanvas() {
             particle77()
             particle88()
             particle99()
-            drawCircle();
+            // drawCircle();
             frame++;
         }, 5);
 
