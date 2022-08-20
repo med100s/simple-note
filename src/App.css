@@ -24,14 +24,15 @@
   to { transform: rotate(360deg); }
 }
 
-.wrap_audio{
+.wrap_audio{ 
   height: 350px;
-  width: 350px;  
+  width: 300px;  
   margin:0 auto;
 
 } 
-.soundbar{    
+.soundbar{
+
   height: auto;
   width: 100%;
   margin:0 auto; 
-}
+} 

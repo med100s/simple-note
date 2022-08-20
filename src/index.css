@@ -3,16 +3,8 @@ body {
   padding: 0px;
   font-family: sans-serif;
   text-align: center;
+  color:white;
+  background: rgba(0, 0, 0, 0)
 }
-.wrap_audio{
-  height: 350px;
-  width: 300px;  
-  margin:0 auto;
-
-} 
-.soundbar{
-
-  height: auto;
-  width: 100%;
-  margin:0 auto; 
+.description{ 
 }
