@@ -33,29 +33,36 @@ export default function BackgroundCanvas() {
             window.mouseY = event.clientY
         }
 
-        function drawParticle(frame, direction = 0) {
+        function drawParticle(frame) {
             let start = 0
+            let direction = 0
             let x = window.mouseX
             let y = window.mouseY
             let x1 = 0
             let y1 = 0
+
+            let x2 = 1
+            let y2 = 1
             return function () {
                 ctx.beginPath();
                 try {
-                      ctx.arc(x + x1, y + y1, 30 - frame / 10, 0, 2 * Math.PI); 
+                    ctx.arc(x + x1, y + y1, 30 - frame / 10, 0, 2 * Math.PI);
                 } catch (err) { }
                 ctx.fillStyle = "white";
                 ctx.fill();
-                x1+=3
-                y1+=3
-                frame+=3
+                x1 += x2
+                y1 += y2
+                frame += 3
                 if (frame % 300 == 0) {
+                    direction = Math.floor(Math.random() * 360)
                     frame = 0
                     direction = 3
                     x = window.mouseX
                     y = window.mouseY
                     x1 = 0
                     y1 = 0
+                    x2 = Math.floor(Math.random() * 6)-3
+                    y2 = Math.floor(Math.random() * 6)-3
                 }
             }
         }
@@ -70,7 +77,7 @@ export default function BackgroundCanvas() {
         let particle7 = new drawParticle(210, 3)
         let particle8 = new drawParticle(240, 2)
         let particle9 = new drawParticle(270, 2)
-        
+
         let particle00 = new drawParticle(15, 0)
         let particle11 = new drawParticle(45, 2)
         let particle22 = new drawParticle(75, 1)
