@@ -21,8 +21,8 @@ export default function BackgroundCanvas() {
 
         
         
-        ctx.canvas.width = window.innerWidth;
-        ctx.canvas.height = window.innerHeight;
+        ctx.canvas.width = window.innerWidth+300;
+        ctx.canvas.height = window.innerHeight +300;
 
         function drawCircle() {
             ctx.beginPath();
@@ -144,8 +144,7 @@ export default function BackgroundCanvas() {
         <div>
             <canvas id="canvas"
                 ref={canvasRef}>
-            </canvas>
-            <h6>asdasds</h6>
+            </canvas> 
         </div>
     );
 }

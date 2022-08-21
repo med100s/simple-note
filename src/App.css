@@ -26,26 +26,27 @@
 
 .wrap_audio{ 
   height: 255px;
-  width: 330px;  
+  width: 315px;  
   margin:30px auto;
   padding-top: 1px;
   border-radius: 15px;  
-  background: linear-gradient(124deg, rgba(250, 36, 0, 0.8),
-                                      rgba(240, 255, 37, 0.8),
-                                      rgba(255, 153, 70, 0.8),
-                                      rgba(255, 41, 41, 0.8), 
-                                      rgba(29, 232, 64, 0.8), 
-                                      rgba(29, 221, 232, 0.8), 
-                                      rgba(43, 29, 232, 0.8), 
-                                      rgba(221, 0, 243, 0.8), 
-                                      #dd00f3);
+  background: linear-gradient(124deg, 
+                                      rgba(240, 255, 37, 0.6),
+                                      rgba(255, 153, 70, 0.6),
+                                      rgba(255, 84, 41, 0.6), 
+                                      rgba(29, 232, 64, 0.6), 
+                                      rgba(29, 221, 232, 0.6), 
+                                      rgba(43, 29, 232, 0.6), 
+                                      rgba(221, 0, 243, 0.6), 
+                                      #df00f386,
+                                      rgba(250, 36, 0, 0.6));
  
-  background-size: 500% 500%;
+  background-size: 300% 300%;
 
-  -webkit-animation: rainbow 18s ease infinite;
-  -z-animation: rainbow 18s ease infinite;
-  -o-animation: rainbow 18s ease infinite;
-  animation: rainbow 18s ease infinite;
+  -webkit-animation: rainbow 12s ease infinite;
+  -z-animation: rainbow 12s ease infinite;
+  -o-animation: rainbow 12s ease infinite;
+  animation: rainbow 12s ease infinite;
 }
 
 @-webkit-keyframes rainbow {

@@ -26,6 +26,7 @@ class App extends Component {
                         <p>They are customazible so if some sound not actually
                             what you need you can change it how you like .</p>
                     </h4>
+                    <h5>For sugesstions: simplesoundspace@gmail.com</h5>
                 </div>
 
                 <BackgroundCanvas />
