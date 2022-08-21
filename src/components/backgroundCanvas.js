@@ -17,22 +17,19 @@ export default function BackgroundCanvas() {
         let canvas = canvasRef.current
 
 
-        let ctx = canvas.getContext('2d');
-
-        
-        
-        ctx.canvas.width = window.innerWidth+300;
-        ctx.canvas.height = window.innerHeight +300;
+        let ctx = canvas.getContext('2d'); 
+        ctx.canvas.width = window.innerWidth;
+        ctx.canvas.height = document.body.offsetHeight +300;
 
         function drawCircle() {
             ctx.beginPath();
-            ctx.arc(window.mouseX, window.mouseY, 30, 0, 2 * Math.PI);
+            ctx.arc(window.mouseX, window.mouseY , 30, 0, 2 * Math.PI);
             ctx.fillStyle = "#c7c7c7";
             ctx.fill();
         }
         function getCursorPosition(event) {
             window.mouseX = event.clientX
-            window.mouseY = event.clientY
+            window.mouseY = event.clientY +window.scrollY
         }
         function getRandomColor() {
             var letters = '0123456789ABCDEF';

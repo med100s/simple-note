@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Equalized from './soundWIthEqualizer';
-import BackgroundCanvas from './backgroundCanvas';
+import Equalized from './components/soundWIthEqualizer';
+import BackgroundCanvas from './components/backgroundCanvas';
+import Footer from './components/footer';
 
 class App extends Component {
     state = { loading: false };
@@ -38,7 +39,7 @@ class App extends Component {
                     <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-blizzard-cold-winds-1153.mp3" title="blizzard" volume={0.3} />
                 </div>
 
-
+                <Footer />
             </div>
         );
     }
