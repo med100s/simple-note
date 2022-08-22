@@ -43,10 +43,7 @@
  
   background-size: 300% 300%;
 
-  -webkit-animation: rainbow 12s ease infinite;
-  -z-animation: rainbow 12s ease infinite;
-  -o-animation: rainbow 12s ease infinite;
-  animation: rainbow 12s ease infinite;
+  
 }
 
 @-webkit-keyframes rainbow {
@@ -69,8 +66,35 @@
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
+.wrap_audio:nth-of-type(1) {
+  opacity: 0.9;
+  background-image: url('https://i.pinimg.com/originals/51/9a/83/519a837a74de5c3a0638a40a31ae0324.gif');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.wrap_audio:nth-of-type(2) {
+  opacity: 0.9;
+  background-image: url('https://media2.giphy.com/media/AHeTfHgVFPHgs/giphy.gif');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.wrap_audio:nth-of-type(3) {
+  opacity: 0.9;
+  background-image: url('https://thumbs.gfycat.com/PopularSevereDove-max-1mb.gif');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.wrap_audio:nth-of-type(4) {
+  opacity: 0.9;
+  background-image: url('https://i.gifer.com/origin/46/46386bfd79c657009b6f30663a974e76.gif');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;
+}
 .soundbar{
-
   height: auto;
   width: 100%;
   margin:0 auto; 

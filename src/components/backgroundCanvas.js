@@ -20,13 +20,7 @@ export default function BackgroundCanvas() {
         let ctx = canvas.getContext('2d'); 
         ctx.canvas.width = window.innerWidth;
         ctx.canvas.height = document.body.offsetHeight +300;
-
-        function drawCircle() {
-            ctx.beginPath();
-            ctx.arc(window.mouseX, window.mouseY , 30, 0, 2 * Math.PI);
-            ctx.fillStyle = "#c7c7c7";
-            ctx.fill();
-        }
+ 
         function getCursorPosition(event) {
             window.mouseX = event.clientX
             window.mouseY = event.clientY +window.scrollY
@@ -49,12 +43,10 @@ export default function BackgroundCanvas() {
             // grad.addColorStop(0.33, color);	// extra point to control "fall-off"
             // grad.addColorStop(1, "black");
 
-            // ctx.fillStyle = grad;
+            // ctx.fillStyle = '#dfbaaf';
             // ctx.filter = "blur(10px)";
             // ctx.fillRect(0, 0, 300, 150);
-
-            ctx.shadowBlur = 40;
-            ctx.shadowColor = color;
+ 
             ctx.fillStyle = color;
             let size = 15
             let start = 0
@@ -85,6 +77,7 @@ export default function BackgroundCanvas() {
                     x2 = (Math.floor(Math.random() * 7) - 3) / 2
                     y2 = (Math.floor(Math.random() * 7) - 3) / 2
                 }
+                
             }
         }
         var frame = 0;
@@ -109,32 +102,36 @@ export default function BackgroundCanvas() {
         let particle77 = new drawParticle(225, 3)
         let particle88 = new drawParticle(255, 2)
         let particle99 = new drawParticle(285, 2)
-        setInterval(function () {
-            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-            particle0()
-            particle1()
-            particle2()
-            particle3()
-            particle4()
-            particle5()
-            particle6()
-            particle7()
-            particle8()
-            particle9()
-            particle00()
-            particle11()
-            particle22()
-            particle33()
-            particle44()
-            particle55()
-            particle66()
-            particle77()
-            particle88()
-            particle99()
-            // drawCircle();
-            frame++;
-        }, 5);
-
+        if (window.innerWidth > 600){
+            setInterval(function () {
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                particle0()
+                particle1()
+                particle2()
+                particle3()
+                particle4()
+                particle5()
+                particle6()
+                particle7()
+                particle8()
+                particle9()
+                particle00()
+                particle11()
+                particle22()
+                particle33()
+                particle44()
+                particle55()
+                particle66()
+                particle77()
+                particle88()
+                particle99()
+                // drawCircle();
+                frame++;
+                if(frame == 1000) frame = 0
+            }, 5);
+    
+        }
+       
     }, [])
 
     return (

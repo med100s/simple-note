@@ -39,6 +39,11 @@ class App extends Component {
                     <Equalized src="https://assets.mixkit.co/sfx/preview/mixkit-blizzard-cold-winds-1153.mp3" title="blizzard" volume={0.3} />
                 </div>
 
+                <h5>donation:</h5>
+                <h5>BTC: 1N7CoaSyyHRazmYZVzxrs3gpcQnyT9uAZ8</h5>
+                <h5>ETH ERC20: 0xd6b79229bdb79614746401f1e12c2a41db32f17d</h5>
+                <h5>USDT ERC20: 0xd6b79229bdb79614746401f1e12c2a41db32f17d</h5>
+                <h5>USDT TRC20: TVYXWqu4q79BTcMEmdyFSAFuVjfQzJ5Sa7</h5>
                 <Footer />
             </div>
         );
